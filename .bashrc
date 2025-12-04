@@ -6,7 +6,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific environment
-if ! [[ "$PATH =~ "$HOME/.local/bin:$HOME/bin:" ]]
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
   PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
@@ -17,13 +17,15 @@ if [ -d ~/.bashrc.d ]; then
   for rc in ~/.bashrc.d/*; do
     if [ -f "$rc" ]; then
       . "$rc"
+    
     fi
-  donefi 
+  done
+fi 
 
 unset rc
 
 # Automatically create or attach to Tmux session
-if command -v tmux &> /dev/null/ && [ -z "$TMUX ]; then
+if command -v tmux &> /dev/null	&& [ -z "$TMUX" ]; then
   tmux attach-session -t default || tmux new-session -s default
 fi
 
@@ -32,3 +34,4 @@ set -o vi
 
 # Custom prompt
 PS1='\A [\u@\h] \w \$ '
+

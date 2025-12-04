@@ -22,6 +22,8 @@ if [ -d ~/.bashrc.d ]; then
   done
 fi 
 
+alias ll='ls -lash'
+
 unset rc
 
 # Automatically create or attach to Tmux session

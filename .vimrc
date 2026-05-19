@@ -14,7 +14,7 @@ filetype indent on
 syntax on
 
 " Turn number lines on by default
-set number
+set relativenumber
 
 " Use highlighting and show matching words during a search
 set hlsearch

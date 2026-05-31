@@ -24,8 +24,8 @@ fi
 
 
 # Set custom aliases
-alias ll='ls -l'
-alias la='ls -la'
+alias ll='ls -lF'
+alias la='ls -laF'
 
 unset rc
 

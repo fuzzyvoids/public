@@ -8,7 +8,7 @@ fi
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:$HOME/.cargo/env:" ]]
 then
-  PATH="$HOME/.local/bin:$HOME/bin:$HOME/.cargo/env:$PATH"
+  PATH="$HOME/.local/bin:$HOME/bin:$HOME/.cargo/env:$HOME/devel/bin/:$PATH"
 fi
 export PATH
 

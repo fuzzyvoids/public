@@ -6,9 +6,9 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:$HOME/.cargo/env:" ]]
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:$HOME/.cargo/env:~/.config/emacs/bin:" ]]
 then
-  PATH="$HOME/.local/bin:$HOME/bin:$HOME/.cargo/env:$HOME/devel/bin/:$PATH"
+  PATH="$HOME/.local/bin:$HOME/bin:$HOME/.cargo/env:$HOME/devel/bin/:~/.config/emacs/bin:$PATH"
 fi
 export PATH
 

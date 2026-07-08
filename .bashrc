@@ -27,6 +27,9 @@ fi
 alias ll='ls -lF'
 alias la='ls -laF'
 
+# Set emacs alias
+alias emacs='emacsclient -c -t -a emacs'
+
 unset rc
 
 # Automatically create or attach to Tmux session
